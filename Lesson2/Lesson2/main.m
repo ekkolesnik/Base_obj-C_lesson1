@@ -10,8 +10,22 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        char act;
+        printf("Введите букву английского алфавита: ");
+        scanf("%s", &act);
+        
+        NSString *letter = [NSString stringWithUTF8String:&act];
+        
+        NSString *letterUppercase = [letter uppercaseString];
+        
+        NSString *alphabet = @"ABCDEFGHIKLMNOPQRSTVXYZ";
+        
+        if ([alphabet containsString:letterUppercase]) {
+            NSLog(@"Привильно");
+        } else {
+            NSLog(@"Не правильно");
+        }
     }
     return 0;
 }
