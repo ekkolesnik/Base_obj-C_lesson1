@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
         
         Test * calculator = [[Test alloc] init];
         
+        [calculator autorelease];
+        
         int a = [calculator plus:@2 andValue2:@3];
         int b = [calculator minus:@2 andValue2:@3];
         int c = [calculator multiplication:@2 andValue2:@3];
